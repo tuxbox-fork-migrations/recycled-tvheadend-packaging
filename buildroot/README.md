@@ -5,10 +5,15 @@ Tvheadend buildroot config
 2. Ensure that the following options are enabled in buildroot config:
   - Toolchain > Enable large file
   - Toolchain > Enable IPV6 support
+  - Package > Networking applications > Tvheadend
 3. Optionally you can enable:
   - imagecache : Package > Libraries > Networking > libcurl
   - avahi : Package > Networking applications > avahi
   - zlib: Package > Libraries > Compression > zlib
+
+4. If you're rebuilding you may need to remove all of:
+  - dl/tvheadend*
+  - output/build/tvheadend*
 
 TBS MOI
 -------
@@ -35,3 +40,8 @@ Note: The last step (accesscontrol) only needs to be done once
 Note: timeshift is currently disabled
 
 Note: dvbcsa is still not linked, so descrambling might be an issue
+
+Note: you probably need to set TVH_DELAY=10 to ensure good startup
+
+Note: you may need to set TVH_USER/GROUP = root, due to default
+      adapter permissions

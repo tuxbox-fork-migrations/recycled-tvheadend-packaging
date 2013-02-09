@@ -50,7 +50,7 @@ TVHEADEND_POST_INSTALL_TARGET_HOOKS  = TVHEADEND_INSTALL_DB
 
 define TVHEADEND_INSTALL_INIT_SYSV
  $(INSTALL) -D $(TVHEADEND_DIR)/debian/tvheadend.default $(TARGET_DIR)/etc/default/tvheadend
- $(INSTALL) -D $(TVHEADEND_DIR)/debian/tvheadend.init $(TARGET_DIR)/etc/init.d/S99tvheadend
+ $(INSTALL) -D package/tvheadend/S99tvheadend $(TARGET_DIR)/etc/init.d/S99tvheadend
 endef
 
 #----------------------------------------------------------------------------
