@@ -4,14 +4,14 @@
 #
 ##############################################################
 
-TVHEADEND_VERSION           = master
-TVHEADEND_SITE              = https://github.com/tvheadend/tvheadend/archive/$(TVHEADEND_VERSION).tar.gz?
+TVHEADEND_VERSION           = hardware/tbsmoi
+TVHEADEND_SITE              = git://github.com/tvheadend/tvheadend.git
 TVHEADEND_LICENSE           = GPLv3+
 TVHEADEND_LICENSE_FILES     = LICENSE
 TVHEADEND_DEPENDENCIES      = host-pkgconf host-python openssl
 
 # Configure options and dependencies
-TVHEADEND_CONFIGURE_OPTS    = --enable-bundle --disable-libav --disable-timeshift
+TVHEADEND_CONFIGURE_OPTS    = --enable-bundle --disable-libav
 
 ifeq ($(BR2_PACKAGE_AVAHI),y)
 TVHEADEND_DEPENDENCIES     += avahi

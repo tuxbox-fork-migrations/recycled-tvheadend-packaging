@@ -35,7 +35,7 @@ case "$1" in
         fi
         ;;
     stop)
-        printf "Stoping TVHeadend daemon: "
+        printf "Stopping TVHeadend daemon: "
         start-stop-daemon -K -q -p ${PIDFILE} -s TERM
         sleep 2
         if start-stop-daemon -K -q -p ${PIDFILE} -t; then
