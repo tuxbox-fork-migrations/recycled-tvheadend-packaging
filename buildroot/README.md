@@ -2,16 +2,18 @@ Tvheadend buildroot config
 ==========================
 
 1. Copy package/tvheadend/ to your buildroot
-2. Ensure that the following options are enabled in buildroot config:
+2. Add "source "package/tvheadend/Config.in"" to package/Config.in, before
+   the udpcast entry.
+3. Ensure that the following options are enabled in buildroot config:
   - Toolchain > Enable large file
   - Toolchain > Enable IPV6 support
   - Package > Networking applications > Tvheadend
-3. Optionally you can enable:
+4. Optionally you can enable:
   - imagecache : Package > Libraries > Networking > libcurl
   - avahi : Package > Networking applications > avahi
   - zlib: Package > Libraries > Compression > zlib
 
-4. If you're rebuilding you may need to remove all of:
+5. If you're rebuilding you may need to remove all of:
   - dl/tvheadend*
   - output/build/tvheadend*
 
