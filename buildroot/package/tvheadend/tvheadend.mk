@@ -4,7 +4,7 @@
 #
 ##############################################################
 
-TVHEADEND_VERSION           = hardware/tbsmoi
+TVHEADEND_VERSION           = release/3.4
 TVHEADEND_SITE              = git://github.com/tvheadend/tvheadend.git
 TVHEADEND_LICENSE           = GPLv3+
 TVHEADEND_LICENSE_FILES     = LICENSE
