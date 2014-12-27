@@ -5,12 +5,12 @@ config BR2_PACKAGE_TVHEADEND
  bool "tvheadend"
  depends on BR2_LARGEFILE && BR2_INET_IPV6
  select BR2_PACKAGE_OPENSSL
+ select BR2_PACKAGE_LIBICONV
  help
    Tvheadend is a TV streaming server for Linux supporting DVB-S,
-   DVB-S2, DVB-C, DVB-T, ATSC, IPTV, and Analog video (V4L) as
-   input sources.
+   DVB-S2, DVB-C, DVB-T, ATSC, and IPTV as input sources.
    
-   https://www.lonelycoder.com/redmine/projects/tvheadend/
+   https://tvheadend.org
    
    Note:
      - a default user has been created to log in the web configuration

@@ -4,7 +4,7 @@
 #
 ##############################################################
 
-TVHEADEND_VERSION           = release/3.4
+TVHEADEND_VERSION           = master
 TVHEADEND_SITE              = git://github.com/tvheadend/tvheadend.git
 TVHEADEND_LICENSE           = GPLv3+
 TVHEADEND_LICENSE_FILES     = LICENSE
@@ -23,8 +23,6 @@ endif
 
 ifeq ($(BR2_PACKAGE_LIBCURL),y)
 TVHEADEND_DEPENDENCIES     += curl
-else
-TVHEADEND_CONFIGURE_OPTS   += --disable-imagecache
 endif
 
 define TVHEADEND_CONFIGURE_CMDS
